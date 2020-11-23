@@ -6,21 +6,20 @@ import java.util.Scanner;
 import Menu.Menu;
 public class GamePlay2 {
 
-    //Scanner 
     static Scanner nc = new Scanner(System.in);
     
-    //Attribute
     static int currentp1;
     static int currentp2;
     static String select;
 
-    //Method GameStart
+    /**
+     * GamePlay used card in class Card
+     * Game Name : Black Jack
+     */
     public static void GameStart() {
         
-        //Check Number of Player
         if (Menu.getLoop() == 2) {
             
-            //ShowDisplay
             Menu.showGameStartBj();
             
             

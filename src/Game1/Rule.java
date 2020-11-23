@@ -2,7 +2,10 @@ package Game1;
 
 public class Rule {
 
-    //Rule
+    /**
+     * Rule in game snake ladder
+     * for p1 and p2
+     */
     public static void RuleP1() {
         switch (GamePlay.currentp1) {
             case 3:

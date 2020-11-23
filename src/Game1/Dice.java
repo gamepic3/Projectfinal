@@ -2,16 +2,21 @@ package Game1;
 
 public class Dice {
 
-    //Attribute
+
     private static final int MAX = 6;
     static int faceValue;
 
-    //Medhot roll
+    /**
+     * roll dice
+     */
     public static void roll() {
         faceValue = (int) (Math.random() * MAX) + 1;
     }
 
-    //GetFaceDice
+    /**
+     *
+     * @return face value
+     */
     public int getFaceValue() {
         return faceValue;
     }

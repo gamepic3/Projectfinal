@@ -8,34 +8,31 @@ import java.util.Scanner;
 
 public class Menu {
 
-    //Attribute
     static int loop;
     private static int choice;
     private static int select;
-    //Scanner
+
     private static Scanner nc = new Scanner(System.in);
 
-    //Method Start Menu(Select Number Player)
+    /**
+     * This menu for select number player
+     * Tell the number of people who will come to play
+     */
     public static void start() {
 
-        //Display Menu (Select Number Player)
         Menu.showStart();
 
-        //select
         while (true) {
-            //Input choice
+
             System.out.print("Select => ");
             choice = nc.nextInt();
 
-            //switch case
             switch (choice) {
                 case 1:
-                    //player = loop
                     loop = 1;
                     menu();
                     break;
                 case 2:
-                    //player = loop
                     loop = 2;
                     menu();
                     break;
@@ -46,34 +43,33 @@ public class Menu {
                 break;
             }
         }
-        //getLoop for loop in other class
     }
     
+    /**
+     * This menu for select
+     * Register or Login
+     * For registration or login to play the game
+     */
     public static void menu() {
 
-        //Default Member
         Member.member[0] = new Member("Game", 123);
         Member.member[1] = new Member("Toey", 123);
         Member.member[2] = new Member("Max", 123);
 
-        //Display Menu (Select Register or Login)
         Menu.showMenu();
 
         while (true) {
 
-            //Input choice
             System.out.print("Select => ");
             select = nc.nextInt();
 
-            //switch case
             switch (select) {
                 case 1:
-                    //Register medhot
+
                     ism.Register();
                     menu();
                     break;
                 case 2:
-                    //Login medhot
                     ism.Login();
                     menuSelectGame();
                     break;
@@ -84,11 +80,13 @@ public class Menu {
         }
     }
     
+    /**
+     * This menu for select game
+     * What game do you want to play?
+     */
     public static void menuSelectGame() {
-        //Display Menu (Select Game)
         Menu.showGameSelect();
 
-        //select
         while (true) {
             System.out.print("Select => ");
             select = nc.nextInt();
@@ -110,12 +108,19 @@ public class Menu {
             }
         }
     }
+
+    /**
+     *
+     * @return Loop
+     * For telling the number of players
+     */
     public static int getLoop(){
         return loop;
     }
-    
-    //Display
-     //Display Start
+
+    /**
+     * show text for menu start
+     */
     public static void showStart() {
         System.out.println(" ---- Player ----");
         System.out.println(" 1 . 1 player ");
@@ -124,7 +129,9 @@ public class Menu {
         System.out.println(" ------ * ------");
     }
 
-    //Display MenuRegister/Login
+    /**
+     * show text for menu select register or login
+     */
     public static void showMenu() {
         System.out.println("");
         System.out.println(" ----- ");
@@ -133,33 +140,46 @@ public class Menu {
         System.out.println(" ----- ");
     }
 
-    //Display Register
+    /**
+     * show text for Sign in (register)
+     */
     public static void showRegister() {
         System.out.println("");
         System.out.println("SIGN IN ");
     }
 
-    //Display Login
+    /**
+     *show text for Login (login)
+     */
     public static void showLogin() {
         System.out.println("");
         System.out.println("LOGIN ");
     }
 
-    //Display GameStart
+    /**
+     * show text for SnakeLadder Game
+     */
     public static void showGameStart() {
         System.out.println("");
         System.out.println("Game Start!");
         for (int i = 0; i < Member.headP; i++) {
-            System.out.println("P1 is " + Member.player[i].getName());
+            int a = 1;
+            System.out.println("P" + a + " is "+ Member.player[i].getName());
+            a++;
         }
     }
     
+    /**
+     * show text for BlackJack Game
+     */
     public static void showGameStartBj(){
         System.out.println("");
         System.out.println("Game Start!");
     }
 
-    //Display Select Game
+    /**
+     * show text for select game 
+     */
     public static void showGameSelect() {
         System.out.println("");
         System.out.println(" - - - - - -");

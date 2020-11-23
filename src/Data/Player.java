@@ -2,15 +2,21 @@ package Data;
 
 public class Player {
 
-    //Attribute
+
     private String name;
 
-    //Constucture
+    /**
+     *
+     * @param name
+     */
     public Player(String name) {
         this.name = name;
     }
 
-    //Getter
+    /**
+     *
+     * @return name
+     */
     public String getName() {
         return name;
     }

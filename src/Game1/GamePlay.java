@@ -10,6 +10,10 @@ public class GamePlay {
     static int currentp1;
     static int currentp2;
 
+    /**
+     * GamePlay used dice in class dice
+     * Game Name : Snake Ladder
+     */
     public static void gameStart() {
         
         currentp1 =0;
